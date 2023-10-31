@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AllTaskWindow.AllTaskController">
+   <left>
+      <AnchorPane prefHeight="509.0" prefWidth="342.0" style="-fx-background-color: #edf5eb; -fx-border-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="510.0" prefWidth="342.0" style="-fx-background-color: #00bda7;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="124.0" prefWidth="342.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <Label prefHeight="98.0" prefWidth="239.0" text="All Schedule" textFill="#1b0454">
+                           <font>
+                              <Font name="Corbel Bold" size="43.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="342.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXListView fx:id="jfxListView" onMouseClicked="#displaySchedule" prefHeight="391.0" prefWidth="360.0" style="-fx-background-color: #edf5eb;" stylesheets="@AllScheduleStyle.css" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="607.0" style="-fx-background-color: #edf5eb;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="15.0" layoutY="15.0" prefHeight="585.0" prefWidth="541.0" style="-fx-background-color: #edf5eb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#addTask" prefHeight="47.0" prefWidth="138.0" style="-fx-background-color: #13033A;" text="Add Task" textFill="#eaf5dc">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXListView fx:id="unCheckedList" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #edf5eb;" styleClass="jfx-rippler" stylesheets="@AllScheduleStyle.css" />
+                  <JFXListView fx:id="checkedList" prefHeight="365.0" prefWidth="558.0" style="-fx-border-color: #edf5eb; -fx-background-color: #edf5eb;" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

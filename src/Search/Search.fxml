@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00bda7; -fx-border-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Search.SearchController">
+   <children>
+      <JFXDatePicker fx:id="datePicker" defaultColor="#160659" layoutX="172.0" layoutY="21.0" prefHeight="48.0" prefWidth="243.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXDatePicker>
+      <Label layoutX="64.0" layoutY="33.0" prefWidth="116.0" text="Search a date:">
+         <font>
+            <Font name="Cambria Math" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-8.0" layoutY="100.0" prefHeight="3.0" prefWidth="602.0" />
+      <JFXListView fx:id="listView" layoutX="2.0" layoutY="129.0" prefHeight="271.0" prefWidth="598.0" style="-fx-background-color: #edf5eb;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="128.0" />
+      <AnchorPane layoutX="2.0" layoutY="102.0" prefHeight="31.0" prefWidth="598.0" style="-fx-background-color: #edf5eb;" />
+      <Label layoutX="23.0" layoutY="109.0" text="Free timeslot:">
+         <font>
+            <Font name="Candara Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="searchBtn" buttonType="RAISED" layoutX="458.0" layoutY="29.0" onAction="#searchAction" prefHeight="41.0" prefWidth="90.0" style="-fx-background-color: #13033A;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

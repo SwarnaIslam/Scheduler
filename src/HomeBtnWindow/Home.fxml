@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ffc966;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeBtnWindow.HomeController">
+   <right>
+      <AnchorPane prefHeight="472.0" prefWidth="199.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXListView fx:id="checkedList" layoutX="-6.0" layoutY="29.0" prefHeight="474.0" prefWidth="201.0" style="-fx-background-color: #ffda96;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="29.0" />
+            <JFXButton fx:id="addBtn" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="20.0" layoutX="88.0" layoutY="389.0" onAction="#AddBtn" prefHeight="99.0" prefWidth="102.0" style="-fx-background-color: #ffb300; -fx-background-radius: 70;" textFill="TRANSPARENT" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="16.0">
+               <graphic>
+                  <ImageView fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../MainWindow/Image/add.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="503.0" prefWidth="837.0" style="-fx-background-color: #ffc966;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXListView fx:id="listView" layoutX="7.0" layoutY="127.0" prefHeight="376.0" prefWidth="806.0" style="-fx-border-color: #ffda96; -fx-background-color: #ffda96;" styleClass="jfx-rippler" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="127.0" />
+            <HBox alignment="CENTER_LEFT" layoutY="21.0" prefHeight="103.0" prefWidth="716.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="84.0">
+               <children>
+                  <JFXButton fx:id="button1" onAction="#Btn1Action" prefHeight="88.0" prefWidth="200.0" ripplerFill="#5a3a05" styleClass="b1" stylesheets="@../MainWindow/Style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="button2" onAction="#Btn2Action" prefHeight="88.0" prefWidth="200.0" ripplerFill="#5a3a05" styleClass="b2" stylesheets="@../MainWindow/Style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="button3" onAction="#Btn3Action" prefHeight="88.0" prefWidth="200.0" ripplerFill="#5a3a05" styleClass="b3" stylesheets="@../MainWindow/Style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="button4" onAction="#Btn4Action" prefHeight="88.0" prefWidth="200.0" ripplerFill="#5a3a05" styleClass="b4" stylesheets="@../MainWindow/Style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="button5" onAction="#Btn5Action" prefHeight="88.0" prefWidth="200.0" ripplerFill="#5a3a05" styleClass="b5" stylesheets="@../MainWindow/Style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="button6" onAction="#Btn6Action" prefHeight="88.0" prefWidth="200.0" ripplerFill="#5a3a05" styleClass="b6" stylesheets="@../MainWindow/Style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="button7" onAction="#Btn7Action" prefHeight="88.0" prefWidth="200.0" ripplerFill="#5a3a05" styleClass="b7" stylesheets="@../MainWindow/Style.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" layoutX="32.0" layoutY="429.0" onAction="#addTask" prefHeight="50.0" prefWidth="143.0" style="-fx-background-color: #ffb300;" text="Add Task" textFill="#4d0c0c" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="32.0">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="97.0" prefWidth="900.0" style="-fx-background-color: #ffc966;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox id="Overview" alignment="CENTER_LEFT" fillHeight="false" layoutX="-3.0" layoutY="-3.0" prefHeight="128.0" prefWidth="1014.0" style="-fx-background-color: #ffb300;" AnchorPane.bottomAnchor="-28.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="-3.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="221.0" text="  Overview" textFill="#510505">
+                     <font>
+                        <Font name="Californian FB Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

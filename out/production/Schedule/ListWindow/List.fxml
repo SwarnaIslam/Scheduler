@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #edf5eb;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListWindow.ListController">
+   <top>
+      <AnchorPane prefHeight="116.0" prefWidth="1099.0" style="-fx-background-color: #00bda7;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="listNameLbl" layoutX="64.0" layoutY="24.0" prefHeight="80.0" prefWidth="217.0" text="Label" textFill="#13033a">
+               <font>
+                  <Font name="Calibri Bold" size="56.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="action" focusColor="#08000a" labelFloat="true" layoutX="863.0" layoutY="33.0" onAction="#listActions" prefHeight="57.0" prefWidth="190.0" promptText="Actions" unFocusColor="#030003">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="510.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="156.0" layoutY="14.0" prefHeight="510.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="45.0" prefWidth="580.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="10.0" text="Incomplete Task" textFill="#13033a">
+                           <font>
+                              <Font name="Bell MT Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" />
+                  <JFXListView fx:id="unCheckedList" onMouseClicked="#showDescriptionOnClick" style="-fx-border-color: transparent; -fx-background-color: #edf5eb;" styleClass="jfx-list-cell" stylesheets="@Style.css" />
+                  <AnchorPane prefHeight="35.0" prefWidth="725.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="10.0" text="Completed Task" textFill="#13033a">
+                           <font>
+                              <Font name="Bell MT Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <JFXListView fx:id="checkedList" layoutY="-1.0" prefHeight="167.0" prefWidth="800.0" style="-fx-border-color: transparent; -fx-background-color: #edf5eb;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+                        <Separator layoutX="67.0" prefHeight="4.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="510.0" prefWidth="299.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="48.0" layoutY="111.0" prefHeight="510.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="45.0" prefWidth="580.0">
+                     <children>
+                        <JFXTextField fx:id="desField" alignment="TOP_LEFT" editable="false" layoutX="4.0" layoutY="37.0" prefHeight="473.0" prefWidth="295.0" style="-fx-background-color: #dfedce;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0" />
+                        <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="40.0" prefWidth="296.0">
+                           <children>
+                              <Label layoutX="17.0" layoutY="8.0" prefHeight="30.0" prefWidth="210.0" text="Task's Description" textFill="#13033a">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Separator layoutX="2.0" layoutY="93.0" orientation="VERTICAL" prefHeight="510.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
